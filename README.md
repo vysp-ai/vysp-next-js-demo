@@ -2,7 +2,7 @@
 
 This is a demo project using VYSP.AI Security platform to protect a ChatGPT demo application.
 
-It uses the VYSP.AI JS client to pretect the ChatGPT application. [NPM](https://www.npmjs.com/package/vysp-js)
+It uses the VYSP.AI TypeScript client to pretect the ChatGPT application. [NPM](https://www.npmjs.com/package/vysp-js)
 
 Thanks to [blrchen](https://github.com/blrchen/chatgpt-minimal) for the base application for this demo.
 
@@ -12,7 +12,7 @@ This demo is a lightweight chatbot built using Next.js and the OpenAI Streaming 
 
 Components:
 
-- VYSP.AI JS Client 
+- VYSP.AI TypeScript Client 
 - Next.js v13
 - OpenAI Streaming API (GPT-3.5 model, gpt-3.5-turbo)
 - API Routes

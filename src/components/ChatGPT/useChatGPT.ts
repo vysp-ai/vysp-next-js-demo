@@ -4,11 +4,11 @@ import ClipboardJS from 'clipboard'
 import { throttle } from 'lodash-es'
 
 import { ChatGPTProps, ChatMessage, ChatRole } from './interface'
-import VYSPClient from "vysp-js"
+import VYSPClient from "vysp-ts"
 
 const vysp_client = new VYSPClient({
-  tenantApiKey: process.env.NEXT_PUBLIC_VYSP_TENANT_API_KEY,
-  gateApiKey: process.env.NEXT_PUBLIC_VYSP_GATE_API_KEY,
+  tenantApiKey: process.env.NEXT_PUBLIC_VYSP_TENANT_API_KEY!,
+  gateApiKey: process.env.NEXT_PUBLIC_VYSP_GATE_API_KEY!,
   installationType: "cloud"
 })
 
@@ -87,7 +87,7 @@ export const useChatGPT = (props: ChatGPTProps) => {
 
       // Check the most recent message with the VYSP.AI Client
       const prompt = messages[messages.length - 1].content
-      const checkInputResult = await vysp_client.checkInput("demo_user_id", prompt, false, { clientInfo: "clientMetadata" });
+      const checkInputResult = await vysp_client.checkInput({client_ref_user_id: "demo_user_id", prompt: prompt, client_ref_internal: false, metadata: { clientInfo: "clientMetadata" }});
       if (checkInputResult.flagged) {
         currentMessage.current = "VYSP.AI Security Error: Please try again. This input was flagged as high-risk."
         throw new Error('Please try again. This input was flagged as high-risk.')
@@ -116,7 +116,7 @@ export const useChatGPT = (props: ChatGPTProps) => {
       }
 
       // Check the most recent message with the VYSP.AI Client
-      const checkOutputResult = await vysp_client.checkOutput("demo_user_id", prompt, currentResponse, false, { clientInfo: "clientMetadata" });
+      const checkOutputResult = await vysp_client.checkOutput({client_ref_user_id: "demo_user_id", prompt: prompt, model_output: currentResponse, client_ref_internal: false, metadata: { clientInfo: "clientMetadata" }});
       if (checkOutputResult.flagged) {
         currentMessage.current = "VYSP.AI Security Error: Sorry, there was an error with model output."
         throw new Error('Sorry, there was an error with model output.')
