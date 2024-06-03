@@ -9,8 +9,7 @@ import VYSPClient from "vysp-js"
 const vysp_client = new VYSPClient({
   tenantApiKey: process.env.NEXT_PUBLIC_VYSP_TENANT_API_KEY,
   gateApiKey: process.env.NEXT_PUBLIC_VYSP_GATE_API_KEY,
-  installationType: "custom",
-  installationUrl: "http://localhost:8000"
+  installationType: "cloud"
 })
 
 
