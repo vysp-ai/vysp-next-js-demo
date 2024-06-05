@@ -9,8 +9,7 @@ export const config = {
 const vysp_client = VYSPClient.clientFromConfig({
   tenantApiKey: process.env.VYSP_TENANT_API_KEY!,
   gateApiKey: process.env.VYSP_GATE_API_KEY!,
-  installationType: "custom",
-  installationUrl: "http://localhost:8000"
+  installationType: "cloud"
 })
 
 
