@@ -30,7 +30,7 @@ const MessageItem = (props: ChatMessageItemProps) => {
     <div className="message-item">
       <div className="meta">
         <div className="avatar">
-          {vyspError ? <img src={logo.src} width={24} height={24} style={{ display: "inline-block", marginTop: "1em", borderRadius: "50%", backgroundColor: "white" }}></img> : <span className={message.role}></span>}
+          {vyspError && message.role === "assistant" ? <img src={logo.src} width={24} height={24} style={{ display: "inline-block", marginTop: "1em", borderRadius: "50%", backgroundColor: "white" }}></img> : <span className={message.role}></span>}
 
         </div>
         <div className="message" dangerouslySetInnerHTML={{ __html: md.render(message.content) }} />

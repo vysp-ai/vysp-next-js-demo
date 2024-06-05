@@ -15,8 +15,8 @@ const HeaderBar = () => {
       <Header className={styles.header}>
         <div className={styles.logoBar}>
           <Link href="/">
-            <img alt="logo" src="/logo192.png" />
-            <h1>ChatGPT Minimal - Protected by VYSP.AI</h1>
+            <img alt="VYSP.AI logo" src="/logo-edit.png" />
+            <h1>ChatGPT Demo - Protected by VYSP.AI</h1>
           </Link>
         </div>
         <Space className={styles.right} size={0}>
