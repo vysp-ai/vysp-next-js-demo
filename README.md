@@ -48,7 +48,7 @@ Go back to your IDE, and create a ".env.local" file using the ".env.example" fil
 
 
 ### Grab your credentials
-The dropdown menu that has your username in it contains your Tenant API key, copy and add to your .env, assigned to the variable "NEXT_PUBLIC_VYSP_TENANT_API_KEY". Then, go to the gate you just created, and copy the gate's API key. Copy and assign the env variable "NEXT_PUBLIC_VYSP_GATE_API_KEY".
+The dropdown menu that has your username in it contains your Tenant API key, copy and add to your .env, assigned to the variable "VYSP_TENANT_API_KEY". Then, go to the gate you just created, and copy the gate's API key. Copy and assign the env variable "VYSP_GATE_API_KEY".
 
 
 ## Deployment
@@ -74,8 +74,8 @@ For VYSP.AI Configuration - Refer to the [VYSP.AI Setup](#vyspai-setup) section:
 
 | Name                      | Description                                    |
 | ------------------------- | ---------------------------------------------- |
-| NEXT_PUBLIC_VYSP_TENANT_API_KEY | Tenant API Key |
-| NEXT_PUBLIC_VYSP_GATE_API_KEY      | Gate API Key                                            |
+| VYSP_TENANT_API_KEY | Tenant API Key |
+| VYSP_GATE_API_KEY      | Gate API Key                                            |
 
 
 For OpenAI account:

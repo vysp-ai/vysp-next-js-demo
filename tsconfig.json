@@ -14,9 +14,9 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["../vysp-next-js-demo/src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["../vysp-next-js-demo/next-env.d.ts", "../vysp-next-js-demo/**/*.ts", "../vysp-next-js-demo/**/*.tsx"],
+  "exclude": ["../vysp-next-js-demo/node_modules"]
 }
